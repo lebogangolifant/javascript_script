@@ -1,4 +1,4 @@
-# JavaScript script
+# JavaScript script - Outreachy Task 1
 
 ### Objective
 This task create a JavaScript script that manipulates a JSON object and formats the output in a human-readable format. The script processes a list of Wikipedia articles, extracting relevant information and displaying it in a structured format on a webpage.
