@@ -35,14 +35,17 @@
             ];
 
             /**
-             * Convert YYYY-MM-DD to readable format
+             * Convert YYYY-MM-DD to a localized readable format
              * @param {string} d - Date string (YYYY-MM-DD)
-             * @returns {string} - Formatted date (Month Day, Year)
+             * @returns {string} - Formatted date based on locale
              */
             const fmtDate = (d) => {
-                const mths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                const [y, m, day] = d.split("-");
-                return `${mths[+m - 1]} ${+day}, ${y}`;
+                const date = new Date(d);
+		return date.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                 });
             };
 
             /**
